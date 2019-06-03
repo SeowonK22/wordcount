@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>WordCount</title>
+        
+        <style>
+        
+            @font-face { font-family: 'DungGeunMo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff'); font-weight: normal; font-style: normal; }
+            @font-face { font-family: 'locus_sangsang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+            * {
+            background-color: #002266;
+            }
+
+            .title {
+                text-align: center;
+                margin-top: 150px;
+                margin-bottom: 80px;
+                font-family: 'DungGeunMo';
+                color: #F47A79;
+            }
+            
+            p {
+                text-align: center;
+                color: lemonchiffon;
+            }
+
+            .textform {
+                text-align: center;
+                color: aliceblue;
+                font-size: 20px;
+            }
+        
+            textarea {
+                color: white;
+                font-family: 'locus_sangsang';
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            textarea::placeholder {
+                color: aliceblue;
+                font-family: 'DungGeunMo';
+                font-size: 15px;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .submit {
+                font-family: 'DungGeunMo';
+                color: #F47A79;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1 class="title">안녕하세요, 여기서 글자를 세세요!</h1>
+
+        <p><a href="{%url 'about'%}" style="color: lemonchiffon; font-family: DungGeunMo;">ABOUT</a></p></br><br>
+            
+        <form action="{%url 'result' %}" class="textform">
+            <textarea cols="100" rows="20" name="fulltext" placeholder="이곳에 텍스트를 입력하세요."></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Count!" class="submit">
+        </form>
+    </body>
+    <footer>
+        <p style="text-align: center; font-family: DungGeunMo; margin-top: 150px; color: lemonchiffon;">DSWU LIKELION 7th SeowonKim</p>
+    </footer>
+</html>
+
+
+

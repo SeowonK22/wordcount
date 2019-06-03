@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+
+        <title>WordCount</title>
+        <style>
+
+            @font-face { font-family: 'DungGeunMo'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff'); font-weight: normal; font-style: normal; }
+            @font-face { font-family: 'locus_sangsang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+            * {
+            background-color: #002266;
+            }
+            
+            .titletext {
+                text-align: center;
+                margin-top: 10rem;
+                margin-bottom: 5rem;
+                font-family: 'DungGeunMo';
+                color: #F47A79;
+            }
+            
+            h2 {
+                font-family: 'DungGeunMo';
+                color: lemonchiffon;
+            }
+
+            p {
+                text-align: center;
+                color: lemonchiffon;
+            }
+        
+
+            tr {
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <h1 class="titletext">당신이 입력한 텍스트는 {{total}}개의 단어로 구성되어있습니다.</h1>
+
+        <p><a href="{% url 'home' %}" style="color: lemonchiffon; font-family: DungGeunMo;">다시 하기</a></p>
+        <br><br><br>
+
+        <article style="text-align: center;">
+        <table >
+            <tr>
+                <h2>입력한 텍스트: </h2>
+                <p style="color: white; font-family: 'locus_sangsang'; text-align: justify; margin-left: 200px; margin-right: 200px;">{{full}}</p>
+                <br>
+            </tr>
+            <tr>
+                <h2>단어 카운트: </h2>
+                <p style="color: white; font-family: 'locus_sangsang';">
+                {% for word, howmany in dictionary %}
+                {{word}} : {{howmany}}
+                <br>
+                {%endfor%}
+                </p>
+            </tr>
+        </table>
+        </article>
+    </body>
+    <footer>
+        <p style="text-align: center; font-family: DungGeunMo; margin-top: 150px; color: lemonchiffon;">DSWU LIKELION 7th SeowonKim</p>
+    </footer>
+    
+</html>
+
